@@ -1,6 +1,64 @@
 # fuzzDicts
 Web Pentesting Fuzz 字典,一个就够了。
 
+
+## log 
+
+不定期更新，使用前建议git pull一下，同步更新。
+
+20200106:
+
+* xss字典增加100+条新Payload，并合并到本项目。
+
+20200104:
+
+* 再次优化参数字典，感谢[key师傅](https://github.com/gh0stkey)的修正。
+
+20191219:
+
+* 使用正则`(\W)`过滤了很多无效的参数,如空格(){}等等,并允许-的存在，重新合并去重了一下参数字典，均放在AllParam.txt，感谢奶权师傅的反馈。
+
+20191214:
+
+* 最近在整理各CMS的漏洞，前前后后下载了50多个CMS,顺便重新采集了一下参数，parameter.txt的体积增加到5859条。（原2800+）
+
+20191106:
+
+* 在密码字典下新增加了华为安全产品默认用户名密码速查表.
+
+20191026:
+
+* 使用过程中发现参数字典冗杂了,所以将最近采集的到的以及一些优秀的工具中的字典合并去重复放进了AllParam.txt，共51219条，推荐使用.
+
+20191022:
+
+* 在参数字典下新增了[Arjun](https://github.com/s0md3v/Arjun)的一个工具,比原先的脚本要强大得多,字典在db目录下.
+
+20190928:
+
+* 在passwordDict下新增了从[猪猪侠师傅Github](https://github.com/ring04h)复制的wifi密码top2000字典。
+
+20190819:
+
+* 在directoryDicts下新增了常见漏洞目录，推荐直接使用all.txt
+
+* 在passwodDict下新增了常见安全设备/路由器/中间件/服务弱口令清单。不过还是推荐使用RW_Password这个强弱口令字典，因为等保的强压之下很多单位不得不将密码设置的复杂，为了方便记忆这些密码又基本都是有规律的，从而诞生了强弱口令，真的很好用啊。
+* 其他更新，本次更新部分字典采集自[SaiDict](https://github.com/Stardustsky/SaiDict),合并的时候仔细去重了。
+
+20190811：
+
+* 上传了自己平常爆破子域名用的字典(从subDomainsBrute,layer等工具中提取出来合并去重，再和自己生成的部分字典合并)，推荐使用main.txt,另一个比较弟弟。
+
+20190801：
+
+* 合并了一个[r35tart](https://github.com/r35tart/RW_Password)师傅整理的很好的“强弱口令”字典（即看起来很复杂，单但实际上很多人在用的密码）
+
+20190615：
+
+* 合并了一个[国外的字典](https://github.com/emadshanab/WordLists-20111129) 感觉分类有点乱 考完试再重新整理一下咯。
+
+## content
+
 * [参数Fuzz字典](#参数fuzz字典)
 * [Xss Fuzz字典](#xss-fuzz字典)
 * [用户名字典](#用户名字典)
@@ -14,16 +72,13 @@ Web Pentesting Fuzz 字典,一个就够了。
 * [路由器后台字典](#路由器后台字典)
 * [文件后缀Fuzz](#文件后缀Fuzz)
 * [js文件字典](#js文件字典)
+* [子域名字典](https://github.com/TheKingOfDuck/fuzzDicts/tree/master/subdomainDicts)
 
 
 
 工具推荐：[burpsuite](https://portswigger.net/burp/),[sqlmap](https://github.com/sqlmapproject/sqlmap),[xssfork](https://github.com/bsmali4/xssfork),[Wfuzz](https://github.com/xmendez/wfuzz/),[webdirscan](https://github.com/TuuuNya/webdirscan)
 
 如果有什么的好字典或是建议欢迎提交issue给我。
-
-## log 
-
-20190615：合并了一个[国外的字典](https://github.com/emadshanab/WordLists-20111129) 感觉分类有点乱 考完试再重新整理一下咯。
 
 
 ## [参数Fuzz字典](https://github.com/TheKingOfDuck/fuzzDicts/blob/master/paramDict)
@@ -114,8 +169,7 @@ https://github.com/TheKingOfDuck/fuzzDicts/tree/master/ctfDict
 
 ![CoolCat](https://github.com/TheKingOfDuck/fuzzDicts/blob/master/ctfDict/ctf-wscan/1.gif)
 
-收集自百度[侵删]。
-
+采集自[kingkaki](https://github.com/kingkaki/ctf-wscan)，原先收集时百度直接下载的压缩包，没看到github链接，所以没标记来源，抱歉抱歉
 
 ## [Api字典](https://github.com/TheKingOfDuck/fuzzDicts/tree/master/apiDict)
 
@@ -149,6 +203,7 @@ https://github.com/TheKingOfDuck/fuzzDicts/tree/master/uploadFileExtDicts
 ## [js文件字典](https://github.com/TheKingOfDuck/fuzzDicts/tree/master/js)
 
 采集自:https://github.com/7dog7/bottleneckOsmosis
+
 
 
 
